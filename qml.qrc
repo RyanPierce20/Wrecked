@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>img/comic-style-vector-background.jpg</file>
+        <file>TextRect.qml</file>
+        <file>img/getwreckedkid.png</file>
+        <file>Dialog.qml</file>
+        <file>SplashScreen.qml</file>
+        <file>OptionsButtonPressed.qml</file>
+        <file>img/arrowkeys.png</file>
+        <file>AnimationGuy.qml</file>
+        <file>img/motor-gif.gif</file>
+        <file>img/light-switch-9.jpg</file>
+        <file>MusicButtonPressed.qml</file>
+        <file>MusicSlider.qml</file>
+        <file>audio/LupeSongIntruments.mp3</file>
+        <file>StartGame.qml</file>
+    </qresource>
+</RCC>
