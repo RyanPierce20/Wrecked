@@ -39,7 +39,7 @@ Rectangle {
         width: musicbuttonpressed.width /6
         height: musicbuttonpressed.height /6
         anchors.bottom: background.bottom
-        anchors.right: background.right
+        anchors.left: background.left
         hello_text.text: "Exit"
         color: "steelblue"
         hello_text.color: "yellow"

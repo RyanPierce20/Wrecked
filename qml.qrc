@@ -10,10 +10,10 @@
         <file>img/arrowkeys.png</file>
         <file>AnimationGuy.qml</file>
         <file>img/motor-gif.gif</file>
-        <file>img/light-switch-9.jpg</file>
         <file>MusicButtonPressed.qml</file>
         <file>MusicSlider.qml</file>
         <file>audio/LupeSongIntruments.mp3</file>
         <file>StartGame.qml</file>
+        <file>img/Clouds_Background.PNG</file>
     </qresource>
 </RCC>

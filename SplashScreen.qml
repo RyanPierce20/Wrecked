@@ -4,7 +4,6 @@ import QtQuick.Window 2.2
 import QtMultimedia 5.6
 Rectangle{
     property alias alias_splash_screen:window
-    //property alias alias_audio:music
     property alias alias_big_wrapper:big_wrapper
     property alias alias_background:background
      property alias alias_get_wrecked:wrecked
@@ -13,7 +12,6 @@ Rectangle{
     property alias alias_instructions_button:instructions
     property alias alias_exit_button:exit
     property alias alias_wrecked:wreck
-    //property alias alias_music:music
 
     signal openMusic
     signal openOptions

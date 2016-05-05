@@ -8,13 +8,14 @@ Window {
     width: Screen.width
     height: Screen.height
     title: "Ready To Get Wrecked?!?!?!"
+
+
     SplashScreen{
         id:splashscreen
         onOpenMusic:
         {
             splashscreen.visible = false
             pressedmusic.visible = true
-
         }
         onOpenOptions:
         {
@@ -23,12 +24,27 @@ Window {
         }
         onOpenGame:
         {
+            driverId.visible = true
             splashscreen.visible = false
-
-            //start game
+            pressedstartgame.visible = true
         }
 
     }
+    AnimationGuy{
+        id: driverId
+        visible:false
+        z:2
+        onEnter:
+        {
+            driverId.visible = false
+        }
+        onExit:
+        {
+            driverId.visible = false
+        }
+
+    }
+
     MusicButtonPressed{
         id:pressedmusic
         visible: false
@@ -46,6 +62,15 @@ Window {
         {
             splashscreen.visible = true
             pressedoptions.visible = false
+        }
+    }
+    StartGame{
+        id:pressedstartgame
+        visible: false
+        onExit:
+        {
+            splashscreen.visible = true
+            pressedstartgame.visible = false
         }
     }
 }

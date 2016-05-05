@@ -10,17 +10,27 @@
  * I've got the game running.
  * **/
 
-class MotoGuy
+class MotoGuy : public QObject
 {
+    Q_OBJECT
 public:
+
     MotoGuy();
-    void SetName(QString name);
-    void SetTime(double time);
-    int GetTime();
-    QString GetName();
+
+public slots:
+    void setName(QString name);
+    void setTime(double time);
+    QString get_names(int index);
+    double get_times(int index);
+    int getTime();
+    QString getName();
 private:
+    int indextime;
+    int indexname;
     double m_time;
     QString m_name;
+    QList<QString> m_names;
+    QList<double> m_times;
 
 };
 
