@@ -1,21 +1,17 @@
 #include "motoguy.h"
 
-MotoGuy::MotoGuy()
+MotoGuy::MotoGuy():m_index(0)
 {
 
 }
 void MotoGuy::setName(QString name)
 {
     m_name = name;
-    m_names.append(name);
-    indexname++;
 }
 
 void MotoGuy::setTime(double time)
 {
     m_time = time;
-    m_times.append(time);
-    indextime++;
 }
 
 int MotoGuy::getTime()
@@ -27,12 +23,8 @@ QString MotoGuy::getName()
 {
     return m_name;
 }
-QString MotoGuy::get_names(int index)
-{
-    return m_names.at(index);
-}
 
-double MotoGuy::get_times(int index)
+int MotoGuy::get_index()
 {
-    return m_times.at(index);
+    return m_index;
 }

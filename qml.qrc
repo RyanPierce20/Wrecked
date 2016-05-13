@@ -15,5 +15,7 @@
         <file>audio/LupeSongIntruments.mp3</file>
         <file>StartGame.qml</file>
         <file>img/Clouds_Background.PNG</file>
+        <file>img/bikecad_animation.gif</file>
+        <file>img/bikegif.gif</file>
     </qresource>
 </RCC>

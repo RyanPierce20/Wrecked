@@ -7,6 +7,9 @@ import QtGraphicalEffects 1.0
 Rectangle{
     signal enter
     signal exit
+    property alias motoname: enterbutton
+    property alias txtenter: txtinput
+
     id:identer
     anchors.fill:parent
 
@@ -15,6 +18,7 @@ Rectangle{
         anchors.fill: parent
         source : "/img/Clouds_Background.PNG" //background pic
     }
+
     Rectangle{
         id: enterName
         height: 400
@@ -62,18 +66,13 @@ Rectangle{
 
         mouse_area.onClicked:
         {
+            MotorcycleGuy.setName(txtinput.text);
+            txtinput.text = MotorcycleGuy.getName();
+            console.log(MotorcycleGuy.getName())
             enter()
         }
     }
 
-    Keys.onReturnPressed:
-    {
-        MotorcycleGuy.setName(txtinput.text);
-        txtinput.text = MotorcycleGuy.getName();
-        console.log(MotorcycleGuy.getName())
-//        console.log(MotorcycleGuy.get_names(index))
-        //make a int index in here
-        //or somehow access it from c++ source
-        enter()
-    }
+
+
 }

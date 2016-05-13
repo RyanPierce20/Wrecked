@@ -8,8 +8,38 @@ Window {
     width: Screen.width
     height: Screen.height
     title: "Ready To Get Wrecked?!?!?!"
+    Rectangle{
+        id: wrapper
+        color:"transparent"
+        anchors.fill: parent
+        focus:true
+    Keys.onSpacePressed: {
 
+        if(pressedstartgame.biker.playing === true){
+            pressedstartgame.biker.playing = false
+            pressedstartgame.gametime.stop()
+            pressedstartgame.paused.visible = true
+        }
+        else{
+            pressedstartgame.biker.playing = true
+            pressedstartgame.gametime.start()
+            pressedstartgame.paused.visible = false
+        }
 
+    }
+    Keys.onReturnPressed:
+    {
+        wrapper.focus = true
+        MotorcycleGuy.setName(driverId.txtenter.text);
+        driverId.txtenter.text = MotorcycleGuy.getName();
+        console.log(MotorcycleGuy.getName())
+        //add a class for game over and display the time and name
+        //enter()
+            driverId.visible = false
+            pressedstartgame.gametime.start()
+        wrapper.focus = true
+
+    }
     SplashScreen{
         id:splashscreen
         onOpenMusic:
@@ -37,10 +67,12 @@ Window {
         onEnter:
         {
             driverId.visible = false
+            pressedstartgame.gametime.start()
         }
         onExit:
         {
             driverId.visible = false
+            pressedstartgame.gametime.stop()
         }
 
     }
@@ -72,5 +104,6 @@ Window {
             splashscreen.visible = true
             pressedstartgame.visible = false
         }
+    }
     }
 }
