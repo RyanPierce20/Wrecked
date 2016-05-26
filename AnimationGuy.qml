@@ -39,20 +39,6 @@ Rectangle{
         color: "black"
 
     }
-    TextRect{
-        id:exitbutton
-        width: identer.width /6
-        height: identer.height /6
-        anchors.bottom: background.bottom
-        anchors.left: background.left
-        hello_text.text: "Exit"
-        color: "steelblue"
-        hello_text.color: "yellow"
-        mouse_area.onClicked:
-        {
-            exit()
-        }
-    }
 
     TextRect{
         id:enterbutton

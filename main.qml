@@ -19,8 +19,10 @@ Window {
             pressedstartgame.biker.playing = false
             pressedstartgame.gametime.stop()
             pressedstartgame.paused.visible = true
+            pressedstartgame.clouds.paused = true
         }
         else{
+            pressedstartgame.clouds.paused = false
             pressedstartgame.biker.playing = true
             pressedstartgame.gametime.start()
             pressedstartgame.paused.visible = false
@@ -35,11 +37,22 @@ Window {
         console.log(MotorcycleGuy.getName())
         //add a class for game over and display the time and name
         //enter()
-            driverId.visible = false
-            pressedstartgame.gametime.start()
+        driverId.visible = false
+        pressedstartgame.gametime.start()
         wrapper.focus = true
 
     }
+    Keys.onUpPressed: {
+        console.log("jump")
+        pressedstartgame.biker.y = 500
+    }
+
+    Keys.onDownPressed: {
+        console.log("down")
+        pressedstartgame.biker.y = 700
+    }
+
+
     SplashScreen{
         id:splashscreen
         onOpenMusic:

@@ -17,5 +17,8 @@
         <file>img/Clouds_Background.PNG</file>
         <file>img/bikecad_animation.gif</file>
         <file>img/bikegif.gif</file>
+        <file>img/CloudGif.gif</file>
+        <file>img/music_logo.png</file>
+        <file>img/music_off-512.png</file>
     </qresource>
 </RCC>

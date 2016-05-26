@@ -1,9 +1,16 @@
 import QtQuick 2.0
 import QtMultimedia 5.5
+import Qt.labs.settings 1.0
 
 Rectangle {
     id: slider
+    Settings{
+        id:musictoggle
+        property alias remembermusic: music.volume
+        property alias sliderremember: slider.value
+    }
 
+    property alias musiconoff: music
     property alias text: buttonText.text
     Accessible.role: Accessible.Slider
 
@@ -110,7 +117,7 @@ Rectangle {
         volume:1.0
         autoPlay: true
         playbackRate: 1.0
-        loops:5
+        loops:20
     }
 
     MouseArea {

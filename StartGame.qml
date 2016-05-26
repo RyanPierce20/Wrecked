@@ -5,18 +5,21 @@ import QtMultimedia 5.6
 import QtGraphicalEffects 1.0
 
 Rectangle{
+
     property alias gametime:timer
     property  alias biker: bikeguy
     property alias paused: paused
+    property alias clouds: background
     property int seconds:0
     signal exit
     id:startgamepressed
     anchors.fill:parent
 
-    Image{
+    AnimatedImage{
         id: background
+        playing:true
         anchors.fill: parent
-        source : "/img/Clouds_Background.PNG" //background pic
+        source : "/img/CloudGif.gif" //background pic
     }
     TextRect{
         id:exitbutton
@@ -40,10 +43,14 @@ Rectangle{
     AnimatedImage{
         id:bikeguy
         x: (parent.width / 2) - 200
-        y: parent.height - 400
+        y: parent.height - 360
         source: "/img/bikegif.gif"
         width: 400
         height: 400
+        Behavior on y{
+            NumberAnimation{ duration: 1000}
+        }
+
     }
     Timer{
         id: timer
@@ -77,6 +84,52 @@ Rectangle{
         anchors.centerIn: parent
         z:5
     }
+    Rectangle{
+        id:baseRect
+        anchors.left: parent.left
+        anchors.top: parent.top
+        height: 100
+        width: 100
+        border.color: "black"
+        border.width:2
+        MouseArea{
+            anchors.fill: parent
+            cursorShape: Qt.PointingHandCursor
+            acceptedButtons: Qt.LeftButton
+            onClicked:
+            {
+                if(toggleon.visible == true)
+                {
+                    musictoggle.visible = true
+                    toggleon.visible = false
+                }
+                if(musictoggle.visible == false)
+                {
+                    toggleon.visible = false
+                    musictoggle.visible = true
+                }
+            }
+        }
+
+        Image
+        {
+            id:musictoggle
+            source: "/img/music_logo.png"
+            visible: true
+            anchors.centerIn: parent
+            height: 50
+            width:50
+        }
+        Image{
+            id: toggleon
+            source: "/img/music_off-512.png"
+            visible: false
+            anchors.centerIn: parent
+            height: 50
+            width:50
+        }
+    }
+
 
 
 }

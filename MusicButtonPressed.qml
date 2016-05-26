@@ -19,9 +19,10 @@ Rectangle {
         id:musictoggle
 
     }
+
     MusicSlider
     {
-
+        //dont delete, need this for music
     }
 
     Text{
