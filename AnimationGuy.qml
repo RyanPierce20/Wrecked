@@ -16,7 +16,7 @@ Rectangle{
     Image{
         id: background
         anchors.fill: parent
-        source : "/img/Clouds_Background.PNG" //background pic
+        source : "/images/img/Clouds_Background.PNG" //background pic
     }
 
     Rectangle{

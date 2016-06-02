@@ -9,7 +9,7 @@ void MotoGuy::setName(QString name)
     m_name = name;
 }
 
-void MotoGuy::setTime(double time)
+void MotoGuy::setTime(int time)
 {
     m_time = time;
 }
@@ -27,4 +27,9 @@ QString MotoGuy::getName()
 int MotoGuy::get_index()
 {
     return m_index;
+}
+QString MotoGuy::gameOver()
+{
+    m_game = "WRECKED";
+    return m_game;
 }

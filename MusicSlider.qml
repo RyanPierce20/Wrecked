@@ -9,8 +9,8 @@ Rectangle {
         property alias remembermusic: music.volume
         property alias sliderremember: slider.value
     }
-
-    property alias musiconoff: music
+    property alias musicstartstop: music
+    property alias musiconoff: music.volume
     property alias text: buttonText.text
     Accessible.role: Accessible.Slider
 
@@ -126,6 +126,7 @@ Rectangle {
             var pos = (mouse.x / slider.width * 100)
             slider.value = pos
             music.volume = slider.value / 100
+
         }
     }
 

@@ -12,12 +12,12 @@ Rectangle {
     Image{
         id: background
         anchors.fill: parent
-        source : "../img/comic-style-vector-background.jpg" //background pic
+        source : "/images/img/comic-style-vector-background.jpg" //background pic
     }
     Image{
         id: arrowcontrols
-        source: "/img/arrowkeys.png"
-        anchors.bottom: background.bottom
+        source: "/images/img/arrowKeys-300x205.png"
+        anchors.top: instructions.bottom
         anchors.horizontalCenter: background.horizontalCenter
     }
 
@@ -28,10 +28,8 @@ Rectangle {
     Text{
         id:instructions
         text:"Controls:
-1. Left Arrow: Leans Back
-2. Right Arrow: Leans Forward
-3. Up Arrow: Acceleration
-4. Down Arrow: Brake or Reverse"
+1. Up Arrow: Moves Up
+2. Down Arrow: Moves back Down"
         color: "blue"
         font.family: "Times New Roman"
         font.pointSize: 20

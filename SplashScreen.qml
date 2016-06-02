@@ -18,15 +18,7 @@ Rectangle{
     signal openGame
     id: window
     anchors.fill: parent
-//    Video{
-//        id:motorgif
-//        source: "/img/motor-gif.gif"
-//        autoPlay: true
-//        width: 200
-//        height:200
-//        anchors.horizontalCenter: window.horizontalCenter
-//        anchors.verticalCenter: window.verticalCenter
-//    }
+
 
 
 Rectangle
@@ -38,13 +30,13 @@ Rectangle
         id:wrecked
         anchors.horizontalCenter: big_wrapper.horizontalCenter
         anchors.bottom: big_wrapper.bottom
-        source: "img/getwreckedkid.png"
+        source: "/images/img/getwreckedkid.png"
         z: 1
     }
     Image{
         id: background
         anchors.fill: parent
-        source : "../img/comic-style-vector-background.jpg" //background pic
+        source : "/images/img/comic-style-vector-background.jpg" //background pic
     }
     TextRect{
         mouse_area.onClicked:
@@ -109,9 +101,6 @@ Rectangle
         hello_text.font.pointSize: 36
         id:wreck
     }
-
-
-
 
 }
 }

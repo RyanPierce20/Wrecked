@@ -21,14 +21,16 @@ public:
 
 public slots:
     void setName(QString name);
-    void setTime(double time);
+    void setTime(int time);
     int getTime();
     QString getName();
+    QString gameOver();
     int get_index();
 private:
     int m_index;
-    double m_time;
+    int m_time;
     QString m_name;
+    QString m_game;
 
 };
 

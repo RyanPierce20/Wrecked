@@ -6,13 +6,14 @@ import Qt.labs.settings 1.0
 import QtMultimedia 5.6
 
 Rectangle {
+    property alias musictoggler: music.musicstartstop
     signal exit
     id:musicbuttonpressed
     anchors.fill: parent
     Image{
         id: background
         anchors.fill: parent
-        source : "../img/comic-style-vector-background.jpg" //background pic
+        source : "/images/img/comic-style-vector-background.jpg" //background pic
     }
 
     Settings{
@@ -22,6 +23,7 @@ Rectangle {
 
     MusicSlider
     {
+        id: music
         //dont delete, need this for music
     }
 
